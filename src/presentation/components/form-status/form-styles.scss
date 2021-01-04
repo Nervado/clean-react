@@ -1,0 +1,19 @@
+@import "../../styles/colors.scss";
+
+
+.errorWrap {    
+    
+  .error {
+    display: none;
+    margin-top: 30px;
+    color: $primaryLight;         
+  }
+
+  .spinner { 
+    margin-top: 30px;
+    //display: none;
+  }
+} 
+
+
+  
