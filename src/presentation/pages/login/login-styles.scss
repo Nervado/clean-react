@@ -33,6 +33,15 @@
       margin: 5px;
       border: none;   
       margin-top: 32px;
+
+      &:disabled {
+        background: $disableBackground;
+        color: $disableColor;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
 
     .link {
