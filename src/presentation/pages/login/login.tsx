@@ -8,16 +8,28 @@ type StateProps = {
   errorMessage: string
 }
 
+type ErrorState = {
+  email: string
+  password: string
+  main: string
+}
+
 const Login: React.FC = () => {
   const [state] = useState<StateProps>({
     isLoading: false,
     errorMessage: ''
   })
 
+  const [errorState] = useState<ErrorState>({
+    email: 'Campo Obrigatório',
+    password: 'Campo Obrigatório',
+    main: ''
+  })
+
   return (
     <div className={Styles.login}>
       <LoginHeader />
-      <Context.Provider value={state}>
+      <Context.Provider value={{ state, errorState }}>
         <form className={Styles.form}>
           <h2>Login</h2>
           <Input type="email" name="email" id="" placeholder="Digite seu email" />
