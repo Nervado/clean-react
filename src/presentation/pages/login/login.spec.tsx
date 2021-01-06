@@ -66,6 +66,7 @@ describe('Login Component', () => {
     expect(emailStatus.title).toBe('ok')
     expect(emailStatus.textContent).toBe('🟢')
   })
+
   test('Should show valid password state if Validation succeds', () => {
     const { sut } = makeSut()
     const passwordInput = sut.getByTestId('password')
